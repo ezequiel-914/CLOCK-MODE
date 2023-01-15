@@ -1,45 +1,51 @@
 let one = document.getElementById('tampa1');
 let two = document.getElementById('tampa2');
 let three = document.getElementById('tampa3');
-let contador = 0;
 var tmp;
-
+let contador=0; 
 function inicio(){
+    
     contador ++;
     
-    if(contador= 1){
-
-        if(one.classList.contains('closed')){
+    if(contador== 1){
+            //Div (1)
+            one.classList.remove('closed');
             one.classList.add('open');
-        }else{
+            //Div (2)
+            two.classList.remove('closed');
+            two.classList.add('closed');
+            //Div(3)
+            three.classList.remove('open');
+            three.classList.add('closed');
+
+          }else if(contador==2){
+                //Div (1)
+            one.classList.remove('open');
             one.classList.add('closed');
-        }
-
-    }else if(contador=2){
-        if(two.classList.contains('closed')){
+            //Div (2)
+            two.classList.remove('closed');
             two.classList.add('open');
-        }else{
-            two.classList.add('closed')
-        }
-    }else{
-        if(three.classList.contains('closed')){
+            //Div(3)
+            three.classList.remove('closed');
+            three.classList.add('closed');       
+            }else{
+                 //Div (1)
+            one.classList.remove('closed');
+            one.classList.add('closed');
+            //Div (2)
+            two.classList.remove('open');
+            two.classList.add('closed');
+            //Div(3)
+            three.classList.remove('closed');
             three.classList.add('open');
-        }else{
-            three.classList.add('closed')
-        }
-        
+            contador=0; 
     }
-  
-  contador=1;
-}
+            }
+          
+     
 
+ setInterval(inicio, 1000);
 
-function start(){
-    tmp=setInterval(inicio,1000);
- 
-
-    
-}
 
 
 
