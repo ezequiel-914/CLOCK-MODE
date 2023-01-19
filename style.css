@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
@@ -11,34 +11,86 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f7f7f7;
 }
-.rectangulo1{
-    width: 100px;
-    height: 20px;
-    border: solid 3px gray;
-    background-color: green;
-    margin: 5px;
+
+.clock{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align-last: center;
+   
+    overflow: hidden;
+   
 }
-.rectangulo2{
-    width: 100px;
-    height: 20px;
-    border: solid 3px gray;
-    background-color: blue;
-    margin: 5px;
+.clock-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    z-index: 10;
 }
-.rectangulo3{
-    width: 100px;
-    height: 20px;
-    border: solid 3px gray;
-    background-color: yellow;
-    margin: 5px;
-}
-.closed{
+
+#q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10, #q11, #q12{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    text-align: center;
     width: 100%;
     height: 100%;
-    background-color: black;
+    font-size: 24px;
+    z-index: 2;
+    
+    
 }
-.open{
-    background-color: rgba(0, 0, 0, 0.05);
+
+#cor1, #cor2, #cor3, #cor4, #cor5, #cor6, #cor7, #cor8, #cor9, #cor10, #cor11, #cor12{
+   
+    width: 140px;
+    height: 40px;
+    z-index: 3;
+}
+#cor1{
+    background-color: red;
+}
+#cor2{
+    background-color: blue;
+}
+#cor3{
+    background-color: yellow;
+}
+#cor4{
+    background-color: aqua;
+}
+#cor5{
+    background-color: blueviolet;
+}
+#cor6{
+    background-color: yellowgreen;
+}
+#cor7{
+    background-color: tomato;
+}
+#cor8{
+    background-color: gray;
+}
+#cor9{
+    background-color: darkgreen;
+}
+#cor10{
+    background-color: rgb(231, 19, 114);
+}
+#cor11{
+    background-color: rgb(152, 194, 35);
+}
+#cor12{
+    background-color: steelblue;
 }
