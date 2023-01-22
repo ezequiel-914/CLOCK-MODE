@@ -8,9 +8,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <header id="header">
+            <h1>Defina o tempo de descanço:</h1>
+            <div class="dados">
+                <select name="intervalos" id="tempo">
+                    <option value="minuto">1 : 00</option>
+                    <option value="minuto-medio">1 : 30</option>
+                    <option value="dois-minutos">2 : 00</option>
+                    <option value="dois-medio">2 : 30</option>
+                    <option value="tres-minutos">3 : 00</option>
+                    <option value="tres-medio">3 : 30</option>
+                    <option value="quatro-minutos">4 : 00</option>
+                    <option value="quatro-medio">4 : 30</option>
+                    <option value="cinco-minutos">5 : 00</option>
+                </select>
+                <input class="start" type="submit" onclick="start(); test()" value="INICIAR">
+            </div>
 
+        </header>
     
-        <div class="clock">
+        <div id="clock" class="clock">
             <div class="clock-center"></div>
 
             <div id="q1" style="transform: rotate(30deg);">
@@ -60,8 +77,19 @@
                 <div id="cor12"></div>
             </div>
         </div>
+      <!--    
+          <video src="nosleep.mp4" id="myvideo" width="700" autoplay loop >
+    
+        </video>
+      -->  
   
-
+        <div class="footer">
+            <footer>
+                <p>Desenvolvido por Ezequiel Rojas</p>
+            </footer>
+        </div>
+      
+        
     <script src="script.js"></script>
 </body>
 </html>

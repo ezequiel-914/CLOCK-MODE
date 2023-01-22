@@ -1,10 +1,15 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family:'glitch';
+    src: url('big_noodle_titling.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;    
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'glitch';
 }
 :root{
     --cor1open:    #07F21B;
@@ -39,12 +44,89 @@
 body{
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-image: url(fundo1.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+header{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+h1{
+    font-size: 70px;
+    color: white;
+    text-shadow: 5px 5px 7px black;
+}
+.dados{
+    height: 500px;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+}
+.dados select{
+    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+    font-size: 45px;
+    font-weight: bold;
+    border-radius: 2px;
+    display: inline-block;
+	width: 400px;
+	cursor: pointer;
+  	padding: 10px 10px;
+  	height: 90px;
+  	outline: 0; 
+  	border: 0;
+	background: #f0f0f036;
+	color: #161616;
+	border:2px solid rgba(0, 0, 0, 0.53);
+    border-radius: 12px;
+    box-shadow: 4px 5px rgba(0, 0, 0, 0.675);
+    text-shadow: 2px 2px#f5f2f2;
+    position: relative;
+    transition: all 0.25s ease;
+  
+}
+.dados select:hover{
+    font-size: 50px;
+    font-weight: bolder;
+    transition: all 0.25s ease;
+    width: 450px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.675);
+    background: #f0f0f0cc;
+    transform: translate(4px);
+}
+.dados > select::-ms-expand {
+    display: none;
+    
+}
+.dados input{
+    width: 200px;
+    height: 80px;
+    font-size: 35px;
+    box-shadow: 3px 3px #16161678;
+}
+.dados input:hover{
+    font-size: 40px;
+    transition: all 0.25s ease;
+    background: #f0f0f0a8;
+}
+
+option{
+    text-align: center;
+    
 }
 
 .clock{
@@ -52,7 +134,7 @@ body{
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     text-align-last: center;
@@ -96,7 +178,7 @@ body{
     background-color: var(--cor2closed);
 }
 #cor3{
-    background-color: var(--cor3open);
+    background-color: var(--cor3closed);
 }
 #cor4{
     background-color: var(--cor4closed);
@@ -124,4 +206,13 @@ body{
 }
 #cor12{
     background-color: var(--cor12closed);
+}
+#myvideo{
+    display: none;
+    height: 1px;
+}
+footer{
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
 }
