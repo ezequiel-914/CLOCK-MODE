@@ -12,32 +12,32 @@
     font-family: 'glitch';
 }
 :root{
-    --cor1open:    #07F21B;
-    --cor2open:    #00941A;
+    --cor1open:    #00ff15;
+    --cor2open:    #26b640;
     --cor3open:    #1acbf8;
     --cor4open:    #1C14FF;
-    --cor5open:    #710AF5;
+    --cor5open:    #8441dc;
     --cor6open:    #FF01E5;
     --cor7open:    #F50033;
-    --cor8open:    #5e2129;
+    --cor8open:    #FFE622;
     --cor9open:    #F26E07;
-    --cor10open:   #FFE622;
-    --cor11open:   #e7d3af;
-    --cor12open:   #B5B2B2;
+    --cor10open:   #cfcfcf;
+    --cor11open:   #ffffff;
+    --cor12open:   #804000;
 
 
-    --cor1closed:  #036f0cae;
+    --cor1closed:  #036f0c7d;
     --cor2closed:  #023b0d7a;
-    --cor3closed:  #00485ab2;
-    --cor4closed:  #0b0779aa;
-    --cor5closed:  #2d0265c4;
-    --cor6closed:  #79006db2;
-    --cor7closed:  #7d0920a8;
-    --cor8closed:  #3d0b12b1;
-    --cor9closed:  #723506ba;
-    --cor10closed: #756911ae;
-    --cor11closed: #534b3eb3;
-    --cor12closed: #353535ae;
+    --cor3closed:  #0d758f76;
+    --cor4closed:  #0b07796d;
+    --cor5closed:  #2d02657c;
+    --cor6closed:  #79006d72;
+    --cor7closed:  #7d092082;
+    --cor8closed:  #75691186;
+    --cor9closed:  #7235067f;
+    --cor10closed: #3f3f3fb1;
+    --cor11closed: #c1c1c182;
+    --cor12closed: #8040008b;
 
 
 }
@@ -148,10 +148,23 @@ option{
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: black;
-    width: 550px;
-    height: 550px;
+   
+    width: 540px;
+    height: 540px;
     border-radius: 50%;
     z-index: 10;
+}
+.clock-center-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    opacity: 50%;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    z-index: 12;
 }
 
 #q1, #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10, #q11, #q12{
@@ -164,8 +177,7 @@ option{
     height: 100%;
     font-size: 24px;
     z-index: 3;
-}
-
+    }
 #cor1, #cor2, #cor3, #cor4, #cor5, #cor6, #cor7, #cor8, #cor9, #cor10, #cor11, #cor12{
     width: 140px;
     height: 40px;
