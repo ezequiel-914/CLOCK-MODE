@@ -9,6 +9,7 @@
 </head>
 <body>
         <header id="header">
+            
             <h1>Defina o tempo de descanço:</h1>
             <div class="dados">
                 <select name="intervalos" id="tempo">
@@ -26,68 +27,84 @@
             </div>
 
         </header>
-    
-        <div id="clock" class="clock">
-            <div id="clock-center" class="clock-center"></div>
-            <div id="clock-center-center" class="clock-center-center"></div>
-            <div id="png-1" class="png-1"></div>
-            <div id="png-2" class="png-2"></div>
-            <div id="png-3" class="png-3"></div>
-            <div id="png-4" class="png-4"></div>
-            <div id="png-5" class="png-5"></div>
-            <div id="png-6" class="png-6"></div>
-            <div id="png-7" class="png-7"></div>
-            <div id="png-8" class="png-8"></div>
-            <div id="png-9" class="png-9"></div>
-            <div id="png-10" class="png-10"></div>
-            <div id="png-11" class="png-11"></div>
-            <div id="png-12" class="png-12"></div>
+        <div id="dados-definidos" style="display:none;">
+                    <div id="data">
+                    <div class="container-data">
+                        <div id="data-txt"></div>
+                    </div>
+                    <div class="container-hora">
+                        <div id="hora-txt"></div>
+                    </div>
+                    </div>
+                    <div class="tempo-definido">
+                        <p><h2>O TEMPO DEFINIDO FOI:</h2> <span>00:</span> <span id="min-definidos" >00</span><span>:</span><span id="seg-definidos">00</span></p>
+                    </div>
+            </div>
+        <div id="corpo" class="corpo">
+            <!--Centro de telas grandes [1)TEMPO DEFINIDO 2)CLOCK 3) TEMPO TOTAL DE TREINO] display row-->
 
-            <div id="q1" style="transform: rotate(30deg);">
-                <div id="cor1"></div>
+            <!--  1)   TEMPO DEFINIDO -->
+            <div class="tempo-definido">
+                <p><h2>O TEMPO DEFINIDO FOI:</h2> <span>00:</span> <span id="min-definidos" >00</span><span>:</span><span id="seg-definidos">00</span></p>
             </div>
 
-            <div id="q2" style="transform: rotate(60deg);">
-                <div id="cor2"></div>
+            <!--  2)   CLOCK -->
+            <div id="clock" class="clock">
+                <div id="clock-center" class="clock-center"></div>
+                <div id="clock-center-center" class="clock-center-center"></div>
+                <div id="png-1" class="png-1"></div>
+                <div id="png-2" class="png-2"></div>
+                <div id="png-3" class="png-3"></div>
+                <div id="png-4" class="png-4"></div>
+                <div id="png-5" class="png-5"></div>
+                <div id="png-6" class="png-6"></div>
+                <div id="png-7" class="png-7"></div>
+                <div id="png-8" class="png-8"></div>
+                <div id="png-9" class="png-9"></div>
+                <div id="png-10" class="png-10"></div>
+                <div id="png-11" class="png-11"></div>
+                <div id="png-12" class="png-12"></div>
+                <div id="q1" style="transform: rotate(30deg);">
+                    <div id="cor1"></div>
+                </div>
+                <div id="q2" style="transform: rotate(60deg);">
+                    <div id="cor2"></div>
+                </div>
+                <div id="q3" style="transform: rotate(90deg);">
+                    <div id="cor3"></div>
+                </div>
+                <div id="q4" style="transform: rotate(120deg);">
+                    <div id="cor4"></div>
+                </div>
+                <div id="q5" style="transform: rotate(150deg);">
+                    <div id="cor5"></div>
+                </div>
+                <div id="q6" style="transform: rotate(180deg);">
+                    <div id="cor6"></div>
+                </div>
+                <div id="q7" style="transform: rotate(210deg);">
+                    <div id="cor7"></div>
+                </div>
+                <div id="q8" style="transform: rotate(240deg);">
+                    <div id="cor8"></div>
+                </div>
+                <div id="q9" style="transform: rotate(270deg);">
+                    <div id="cor9"></div>
+                </div>
+                <div id="q10" style="transform: rotate(300deg);">
+                    <div id="cor10"></div>
+                </div>
+                <div id="q11" style="transform: rotate(330deg);">
+                    <div id="cor11"></div>
+                </div>
+                <div id="q12" style="transform: rotate(0deg);">
+                    <div id="cor12"></div>
+                </div>
             </div>
 
-            <div id="q3" style="transform: rotate(90deg);">
-                <div id="cor3"></div>
-            </div>
-
-            <div id="q4" style="transform: rotate(120deg);">
-                <div id="cor4"></div>
-            </div>
-
-            <div id="q5" style="transform: rotate(150deg);">
-                <div id="cor5"></div>
-            </div>
-
-            <div id="q6" style="transform: rotate(180deg);">
-                <div id="cor6"></div>
-            </div>
-
-            <div id="q7" style="transform: rotate(210deg);">
-                <div id="cor7"></div>
-            </div>
-
-            <div id="q8" style="transform: rotate(240deg);">
-                <div id="cor8"></div>
-            </div>
-            <div id="q9" style="transform: rotate(270deg);">
-                <div id="cor9"></div>
-            </div>
-
-            <div id="q10" style="transform: rotate(300deg);">
-                <div id="cor10"></div>
-            </div>
-
-            <div id="q11" style="transform: rotate(330deg);">
-                <div id="cor11"></div>
-            </div>
-
-            <div id="q12" style="transform: rotate(0deg);">
-                <div id="cor12"></div>
+            <!--   3) TEMPO TOTAL DE TREINO -->
+            <div class="totaltreino">
+                <p><h2>TEMPO TOTAL DE TREINO:</h2> <span>00:</span> <span id="mintot">00</span><span>:</span><span id="segtot">00</span></p>
             </div>
         </div>
       <!--    

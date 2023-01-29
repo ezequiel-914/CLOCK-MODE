@@ -60,6 +60,37 @@ header{
     justify-content: space-around;
     flex-direction: column;
 }
+#dados-definidos{
+    /*border: 2px solid red;*/
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#data{
+    /*border: solid 3px green;*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+#data-txt, #hora-txt{
+    width: 300px;
+    font-size: 40px;
+}
+.container-data, .container-hora{
+    text-align: center;
+    color: var(--cor11open);
+}
+.tempo-definido{
+    text-align: center;
+    color: var(--cor11open);
+}
+.tempo-definido> h2{
+    font-size: 50px;
+}
 h1{
     font-size: 70px;
     color: white;
@@ -128,18 +159,34 @@ option{
     text-align: center;
     
 }
-
+.totaltreino{
+    text-align: center;
+}
+.totaltreino> span{
+    color: var(--cor10open);
+}
+.totaltreino> h2{
+    color: var(--cor10open);
+    font-size: 50px;
+}
+.corpo{
+    width: 100vw;
+    border: solid yellow 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+}
 .clock{
     position: relative;
     width: 600px;
     height: 600px;
     border-radius: 50%;
-    display: none;
     align-items: center;
     justify-content: center;
     text-align-last: center;
     overflow: hidden;
-    
    
 }
 .clock-center{

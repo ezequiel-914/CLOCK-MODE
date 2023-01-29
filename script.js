@@ -1,12 +1,39 @@
 var contador = 0;
 var tmp;
 var voltas;
-
+var data;
 
 
 function start(){
     tmp = setInterval(timer, 1000);
- }  
+    data = setInterval(data,1000);
+    document.getElementById('dados-definidos').style.display="block";
+ }
+ function data(){   
+    var data = new Date();
+    
+    // Guarda cada pedaço em uma variável
+    var dia     = data.getDate();           // 1-31
+    var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+    var mes     = data.getMonth();          // 0-11 (zero=janeiro)
+    var ano2    = data.getYear();           // 2 dígitos
+    var ano4    = data.getFullYear();       // 4 dígitos
+    var hora    = data.getHours();          // 0-23
+    var min     = data.getMinutes();        // 0-59
+    var seg     = data.getSeconds();        // 0-59
+    var mseg    = data.getMilliseconds();   // 0-999
+    var tz      = data.getTimezoneOffset(); // em minutos
+    
+    // Formata a data e a hora (note o mês + 1)
+    var str_data = dia + '/' + (mes+1) + '/' + ano4;
+    var str_hora = hora + ':' + min + ':' + seg;
+    
+    
+    document.getElementById('data-txt').innerHTML=str_data
+    document.getElementById('hora-txt').innerHTML=str_hora
+    
+    
+}
 
 function timer(){
     var tempo = document.getElementById('tempo').value;
@@ -41,7 +68,7 @@ function timer(){
     }
     console.log(voltas);
     document.getElementById('header').style.display="none";
-    document.getElementById('clock').style.display="flex";
+    document.getElementById('corpo').style.display="flex";
     contador++;
     
     if(contador<(voltas*1)){
