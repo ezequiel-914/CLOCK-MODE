@@ -25,7 +25,7 @@
                 </select>
                 <input class="start" type="submit" onclick="start();" value="INICIAR">
             </div>
-
+            <h2 class="title" id="title">00:00</h2>
         </header>
         <div id="dados-definidos" style="display:none;">
                     <div id="data">
@@ -36,19 +36,19 @@
                         <div id="hora-txt"></div>
                     </div>
                     </div>
-                    <div class="tempo-definido">
-                        <p><h2>O TEMPO DEFINIDO FOI:</h2> <span>00:</span> <span id="min-definidos" >00</span><span>:</span><span id="seg-definidos">00</span></p>
+                    <div class="tempo-definido" id="temp-def-sup">
+                        <p><h2>O TEMPO DEFINIDO FOI:</h2> <span class="temp-def" >00:00:00</span></p>
                     </div>
             </div>
         <div id="corpo" class="corpo">
-            <!--Centro de telas grandes [1)TEMPO DEFINIDO 2)CLOCK 3) TEMPO TOTAL DE TREINO] display row-->
+            <!--Centro de telas grandes [1)TEMPO DEFINIDO 2)CLOCK 3) TEMPO TOTAL DE TREINO] display row------------------------->
 
-            <!--  1)   TEMPO DEFINIDO -->
-            <div class="tempo-definido">
-                <p><h2>O TEMPO DEFINIDO FOI:</h2> <span>00:</span> <span id="min-definidos" >00</span><span>:</span><span id="seg-definidos">00</span></p>
+            <!--  1)   TEMPO DEFINIDO --------------------------------------------------------------------------------->
+            <div class="tempo-definido" id="temp-def-lat">
+                <h2>O TEMPO DEFINIDO FOI:</h2> <span class="temp-def" >00:00:00</span>
             </div>
 
-            <!--  2)   CLOCK -->
+            <!--  2)   CLOCK ------------------------------------------------------------------------------------------->
             <div id="clock" class="clock">
                 <div id="clock-center" class="clock-center"></div>
                 <div id="clock-center-center" class="clock-center-center"></div>
@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            <!--   3) TEMPO TOTAL DE TREINO -->
+            <!--   3) TEMPO TOTAL DE TREINO --------------------------------------------------------------------------->
             <div class="totaltreino">
                 <p><h2>TEMPO TOTAL DE TREINO:</h2> <span>00:</span> <span id="mintot">00</span><span>:</span><span id="segtot">00</span></p>
             </div>
@@ -112,8 +112,15 @@
     
         </video>
       -->  
-  
-        <div class="footer">
+        <!------------------------------  BOTONES OPRADORES---------------------------------------------------------------> 
+        <div class="operadores">
+            <input type="button" value="PAUSAR" id="botaopausa" onclick="parar();" style="display: none;">
+            <input type="submit" value="CONTINUAR" id="continuar" onclick="start();" style="display: none;">
+            <a href="https://ezequiel-914.github.io/TIME-CONTROL/" id="voltar" style="display:none; text-decoration: none;">VOLTAR</a>
+        </div>
+         <!----------------------------------------FOOTER---------------------------------------------------------------> 
+
+        <div id="footer" class="footer">
             <footer>
                 <p>Desenvolvido por Ezequiel Rojas</p>
             </footer>

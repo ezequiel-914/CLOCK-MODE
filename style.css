@@ -1,16 +1,12 @@
 @charset "UTF-8";
-
 @font-face {
     font-family:'glitch';
-    src: url('big_noodle_titling.ttf');
-}
-
+    src: url('big_noodle_titling.ttf');}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;    
-    font-family: 'glitch';
-}
+    font-family: 'glitch';}
 :root{
     --cor1open:    #00ff15;
     --cor2open:    #26b640;
@@ -24,8 +20,7 @@
     --cor10open:   #cfcfcf;
     --cor11open:   #ffffff;
     --cor12open:   #804000;
-
-
+/*---------- cores no modo desativado------------*/
     --cor1closed:  #036f0c7d;
     --cor2closed:  #023b0d7a;
     --cor3closed:  #0d758f76;
@@ -39,6 +34,7 @@
     --cor11closed: #c1c1c182;
     --cor12closed: #8040008b;
 
+/*----------------------- PAGINA INICIAL // HEADER APÓS A INICIAÇAO DO CLOCK -------------------------*/
 
 }
 body{
@@ -47,7 +43,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-image: url(img/fundo3.jpg);
+    background-image: url(img/fundo.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -90,6 +86,11 @@ header{
 }
 .tempo-definido> h2{
     font-size: 50px;
+    text-shadow: #7777774c 2px 2px 3px;
+}
+.tempo-definido> span{
+    font-size: 50px;
+    text-shadow: #7777774c 2px 2px 3px;
 }
 h1{
     font-size: 70px;
@@ -97,62 +98,76 @@ h1{
     text-shadow: 5px 5px 7px black;
 }
 .dados{
-    height: 500px;
+    height: 150px;
     width: 30vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     font-size: 40px;
+    border: solid 4px green;
 }
 .dados select{
     appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-    font-size: 45px;
-    font-weight: bold;
-    border-radius: 2px;
+    font-size: 40px;
     display: inline-block;
-	width: 400px;
+	width: 200px;
 	cursor: pointer;
   	padding: 10px 10px;
-  	height: 90px;
+  	
   	outline: 0; 
   	border: 0;
-	background: #f0f0f036;
-	color: #161616;
+	background: rgba(0, 0, 0, 0.341);
+	color: white;
 	border:2px solid rgba(0, 0, 0, 0.53);
-    border-radius: 12px;
-    box-shadow: 4px 5px rgba(0, 0, 0, 0.675);
-    text-shadow: 2px 2px#f5f2f2;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.675);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.587);
     position: relative;
-    transition: all 0.25s ease;
+    transition: 0,3s;
+    opacity: 60%;
   
 }
 .dados select:hover{
-    font-size: 50px;
-    font-weight: bolder;
-    transition: all 0.25s ease;
-    width: 450px;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.675);
-    background: #f0f0f0cc;
-    transform: translate(4px);
+    opacity: 100%;
+    transition: 0.3s;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.267);
+    transform: translate(1px);
 }
 .dados > select::-ms-expand {
     display: none;
     
 }
-.dados input{
+.start{
+    background-color: rgba(0, 0, 0, 0.341);
+    color: white;
     width: 200px;
-    height: 80px;
-    font-size: 35px;
-    box-shadow: 3px 3px #16161678;
-}
-.dados input:hover{
+    padding: 10px;
+    border: none;
+    opacity: 60%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.275);
+    transition: 0,3s;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.587);
     font-size: 40px;
-    transition: all 0.25s ease;
-    background: #f0f0f0a8;
+    cursor: pointer;
+}
+.start:hover{
+    opacity: 100%;
+    transition: 0.3s;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.267);
+    transform: translate(1px, 1px);
+    
+}.title{
+    font-size: 140px;
+    font-weight: 200;
+    color: orange;
+    padding: 30px;
+    border: solid blue 3px;
+
 }
 
 option{
@@ -164,11 +179,19 @@ option{
 }
 .totaltreino> span{
     color: var(--cor10open);
+    font-size: 50px;
+    text-shadow: #7777774c 2px 2px 3px;
 }
 .totaltreino> h2{
     color: var(--cor10open);
     font-size: 50px;
+    text-shadow: #7777774c 2px 2px 3px;
 }
+
+
+/*----------------------- CORPO E CLOCK -------------------------*/
+
+
 .corpo{
     width: 100vw;
     border: solid yellow 3px;
@@ -457,6 +480,67 @@ option{
 #cor12{
     background-color: var(--cor12closed);
 }
+/*----------------------- OPERADORES -------------------------*/
+.operadores{
+    width: 100vw;
+    height: 100px;
+    border: red solid 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#botaopausa{
+    color: var(--cor11open);
+    height: 60px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.341);
+    padding: 10px;
+    border: none;
+    opacity: 60%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.275);
+    transition: 0,3s;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.587);
+    font-size: 40px;
+}
+#botaopausa:hover{
+    opacity: 100%;
+    transition: 0.3s;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.267);
+    transform: translate(1px, 1px);
+}
+#continuar{
+
+}
+.operadores> a{
+    text-align: center;
+    justify-content: center;
+}
+#voltar{
+    height: 60px;
+    width: 200px;
+    color: var(--cor11open);
+    background-color: rgba(0, 0, 0, 0.341);
+    padding: 10px;
+    border: none;
+    opacity: 60%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.275);
+    transition: 0,3s;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.587);
+    font-size: 40px;
+}
+#voltar:hover{
+    opacity: 100%;
+    transition: 0.3s;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.267);
+    transform: translate(1px, 1px);
+}
+
+
+/*----------------------- FOOTER -------------------------*/
+
 #myvideo{
     display: none;
     height: 1px;
@@ -465,4 +549,13 @@ footer{
     font-size: 20px;
     color: white;
     text-shadow: 2px 2px 2px black;
+}
+
+
+
+/*---------------------------------------MEDIA QUERY TELAS GIGANTES ---------------------------------*/
+@media (min-width: 1450px){
+    #temp-def-sup{
+        display: none;
+    }
 }

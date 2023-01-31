@@ -2,11 +2,13 @@ var contador = 0;
 var tmp;
 var voltas;
 var data;
+var tempototaldetreino;
 
 
 function start(){
     tmp = setInterval(timer, 1000);
     data = setInterval(data,1000);
+    tempototaldetreino = setInterval(tempototal,1000);
     document.getElementById('dados-definidos').style.display="block";
  }
  function data(){   
@@ -37,33 +39,53 @@ function start(){
 
 function timer(){
     var tempo = document.getElementById('tempo').value;
+    document.getElementById('botaopausa').style.display="block";
+    document.getElementById('voltar').style.display="block";
     switch(tempo){
         case "minuto":
             voltas = 5;
+            document.getElementsByClassName("temp-def")[0].innerHTML="00:01:00";
+            document.getElementsByClassName("temp-def")[1].innerHTML="00:01:00";
             break;
         case "minuto-medio":
             voltas = 7;
+            document.getElementsByClassName("temp-def")[0].innerHTML="00:01:30";
+            document.getElementsByClassName("temp-def")[1].innerHTML="00:01:30";
             break;
         case "dois-minutos":
             voltas = 10;
+            document.getElementsByClassName("temp-def")[0].innerHTML="00:02:00";
+            document.getElementsByClassName("temp-def")[1].innerHTML="00:02:00";
             break;
         case "dois-medio":
             voltas = 12;
+            document.getElementsByClassName("temp-def")[0].innerHTML="00:02:30";
+            document.getElementsByClassName("temp-def")[1].innerHTML="00:02:30";
             break;
         case "tres-minutos":
              voltas = 15;
+             document.getElementsByClassName("temp-def")[0].innerHTML="00:03:00";
+             document.getElementsByClassName("temp-def")[1].innerHTML="00:03:00";
             break;
         case "tres-medio":
             voltas = 17;
+            document.getElementsByClassName("temp-def")[0].innerHTML="00:03:30";
+            document.getElementsByClassName("temp-def")[1].innerHTML="00:03:30";
             break;
         case "quatro":
             voltas = 20;
+            document.getElementsByClassName("temp-def")[0].innerHTML="00:04:00";
+            document.getElementsByClassName("temp-def")[1].innerHTML="00:04:00";
             break;
         case "quatro-medio":
             voltas = 22;
+            document.getElementsByClassName("temp-def")[0].innerHTML="00:04:30";
+            document.getElementsByClassName("temp-def")[1].innerHTML="00:04:30";
             break;
         case "cinco-minutos":
             voltas = 25;
+            document.getElementsByClassName("temp-def")[0].innerHTML="00:05:00";
+            document.getElementsByClassName("temp-def")[1].innerHTML="00:05:00";
             break;
     }
     console.log(voltas);
@@ -149,3 +171,44 @@ function timer(){
 }
 
 }
+//########################## CONTADOR DO TEMPO TOTAL DE TREINO #######################################################
+
+   let minutostotal=0;
+   let segundostotal=0;
+   
+   function tempototal(){
+       segundostotal++;
+       if(segundostotal>59){
+           minutostotal++;
+           segundostotal=0;
+           if(minutostotal<10){
+               document.getElementById('mintot').innerHTML='0'+minutostotal;
+           }else{
+               document.getElementById('mintot').innerHTML=minutostotal;
+           }
+           
+       }
+       if(segundostotal<10){
+           document.getElementById('segtot').innerHTML='0'+segundostotal;
+       }else{
+           document.getElementById('segtot').innerHTML=segundostotal;
+       }
+       
+   } 
+   //########################## PARAR // PAUSAR CLOCK #######################################################
+
+   function parar(){
+       clearInterval(tmp);
+       clearInterval(tempototaldetreino);
+       document.getElementById('continuar').style.display="block";
+       document.getElementById('iniciar').value="CONTINUAR";
+       document.getElementById('botaopausa').style.display="none";
+   }
+      //########################## PARAR // PAUSAR CLOCK #######################################################
+
+
+      var select = document.getElementById('tempo');
+      select.addEventListener('blur', sair);
+      function sair(){
+        document.getElementById('tempo').style.display="none;";
+      }
