@@ -13,19 +13,19 @@
             <h1>Defina o tempo de descanço:</h1>
             <div class="dados">
                 <select name="intervalos" id="tempo">
-                    <option value="minuto">1 : 00</option>
-                    <option value="minuto-medio">1 : 30</option>
-                    <option value="dois-minutos">2 : 00</option>
-                    <option value="dois-medio">2 : 30</option>
-                    <option value="tres-minutos">3 : 00</option>
-                    <option value="tres-medio">3 : 30</option>
-                    <option value="quatro-minutos">4 : 00</option>
-                    <option value="quatro-medio">4 : 30</option>
-                    <option value="cinco-minutos">5 : 00</option>
+                    <option value="minuto">01 : 00</option>
+                    <option value="minuto-medio">01 : 30</option>
+                    <option value="dois-minutos">02 : 00</option>
+                    <option value="dois-medio">02 : 30</option>
+                    <option value="tres-minutos">03 : 00</option>
+                    <option value="tres-medio">03 : 30</option>
+                    <option value="quatro-minutos">04 : 00</option>
+                    <option value="quatro-medio">04 : 30</option>
+                    <option value="cinco-minutos">05 : 00</option>
                 </select>
-                <input class="start" type="submit" onclick="start();" value="INICIAR">
+                <input class="start" id="iniciar" type="submit" onclick="start(); starttotal()" value="INICIAR">
             </div>
-            <h2 class="title" id="title">00:00</h2>
+            <h2 class="title" id="title">clock</h2>
         </header>
         <div id="dados-definidos" style="display:none;">
                     <div id="data">
@@ -115,6 +115,7 @@
         <!------------------------------  BOTONES OPRADORES---------------------------------------------------------------> 
         <div class="operadores">
             <input type="button" value="PAUSAR" id="botaopausa" onclick="parar();" style="display: none;">
+
             <input type="submit" value="CONTINUAR" id="continuar" onclick="start();" style="display: none;">
             <a href="https://ezequiel-914.github.io/TIME-CONTROL/" id="voltar" style="display:none; text-decoration: none;">VOLTAR</a>
         </div>

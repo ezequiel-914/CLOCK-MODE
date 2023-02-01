@@ -3,13 +3,14 @@ var tmp;
 var voltas;
 var data;
 var tempototaldetreino;
-
+let tmpt;
+   
 
 function start(){
     tmp = setInterval(timer, 1000);
     data = setInterval(data,1000);
-    tempototaldetreino = setInterval(tempototal,1000);
     document.getElementById('dados-definidos').style.display="block";
+    document.getElementById('title').style.display="none";
  }
  function data(){   
     var data = new Date();
@@ -176,6 +177,13 @@ function timer(){
    let minutostotal=0;
    let segundostotal=0;
    
+   function starttotal(){
+    tmpt=setInterval(tempototal,1000);
+    document.getElementById('continuar').style.display="none";
+    document.getElementById('title').style.display="none";
+    document.getElementById('totaltreino').style.display="block";
+}
+
    function tempototal(){
        segundostotal++;
        if(segundostotal>59){
@@ -199,7 +207,7 @@ function timer(){
 
    function parar(){
        clearInterval(tmp);
-       clearInterval(tempototaldetreino);
+       clearInterval(tmpt);
        document.getElementById('continuar').style.display="block";
        document.getElementById('iniciar').value="CONTINUAR";
        document.getElementById('botaopausa').style.display="none";
