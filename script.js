@@ -16,6 +16,8 @@ function start(){
     document.getElementById('title').style.display="none";
     document.getElementById('continuar').style.display="none";
     document.getElementById('title').style.display="none";
+    document.getElementById('myvideo').play();
+
    
     
     
