@@ -23,7 +23,7 @@
                     <option value="quatro-medio">04 : 30</option>
                     <option value="cinco-minutos">05 : 00</option>
                 </select>
-                <input class="start" id="iniciar" type="submit" onclick="start(); starttotal()" value="INICIAR">
+                <input type="submit" value="INICIAR" class="start" id="iniciar"  onclick="start();" >
             </div>
             <h2 class="title" id="title">clock</h2>
         </header>
@@ -37,7 +37,7 @@
                     </div>
                     </div>
                     <div class="tempo-definido" id="temp-def-sup">
-                        <p><h2>O TEMPO DEFINIDO FOI:</h2> <span class="temp-def" >00:00:00</span></p>
+                        <p><h2>O TEMPO DEFINIDO FOI :</h2> <span class="temp-def" >00:00:00</span></p>
                     </div>
             </div>
         <div id="corpo" class="corpo">
@@ -103,11 +103,13 @@
             </div>
 
             <!--   3) TEMPO TOTAL DE TREINO --------------------------------------------------------------------------->
-            <div class="totaltreino">
-                <p><h2>TEMPO TOTAL DE TREINO:</h2> <span>00:</span> <span id="mintot">00</span><span>:</span><span id="segtot">00</span></p>
+            <div class="totaltreino" id="totaltreino-lat">
+                <p><h2>TEMPO TOTAL DE TREINO:</h2> <span>00:</span> <span class="mintot" id="mintot">00</span><span>:</span><span class="segtot" id="segtot">00</span></p>
             </div>
         </div>
-      <!--    
+        <div class="totaltreino" id="totaltreino-inf">
+                <p><h2>TEMPO TOTAL DE TREINO:</h2> <span>00:</span> <span class="mintot" id="mintot">00</span><span>:</span><span class="segtot" id="segtot">00</span></p>
+            </div> <!-- 
           <video src="nosleep.mp4" id="myvideo" width="700" autoplay loop >
     
         </video>
@@ -115,9 +117,8 @@
         <!------------------------------  BOTONES OPRADORES---------------------------------------------------------------> 
         <div class="operadores">
             <input type="button" value="PAUSAR" id="botaopausa" onclick="parar();" style="display: none;">
-
             <input type="submit" value="CONTINUAR" id="continuar" onclick="start();" style="display: none;">
-            <a href="https://ezequiel-914.github.io/TIME-CONTROL/" id="voltar" style="display:none; text-decoration: none;">VOLTAR</a>
+            <a href="#" id="voltar" style="display:none; text-decoration: none;">VOLTAR</a>
         </div>
          <!----------------------------------------FOOTER---------------------------------------------------------------> 
 

@@ -4,14 +4,35 @@ var voltas;
 var data;
 var tempototaldetreino;
 let tmpt;
+let tela;
    
 
 function start(){
     tmp = setInterval(timer, 1000);
     data = setInterval(data,1000);
+    tmpt = setInterval(tempototal,1000);
+    tela = setInterval(telaverif, 1000);
     document.getElementById('dados-definidos').style.display="block";
     document.getElementById('title').style.display="none";
+    document.getElementById('continuar').style.display="none";
+    document.getElementById('title').style.display="none";
+   
+    
+    
+  
  }
+function telaverif(){
+    var largura = window.innerWidth;
+    console.log(largura);
+    if(largura<=950){
+        document.getElementById('totaltreino-inf').style.display="block";
+        document.getElementById('totaltreino-lat').style.display="none";
+    }else{
+        document.getElementById('totaltreino-inf').style.display="none";
+        document.getElementById('totaltreino-lat').style.display="block";
+    }
+}
+
  function data(){   
     var data = new Date();
     
@@ -42,6 +63,9 @@ function timer(){
     var tempo = document.getElementById('tempo').value;
     document.getElementById('botaopausa').style.display="block";
     document.getElementById('voltar').style.display="block";
+
+
+
     switch(tempo){
         case "minuto":
             voltas = 5;
@@ -177,12 +201,6 @@ function timer(){
    let minutostotal=0;
    let segundostotal=0;
    
-   function starttotal(){
-    tmpt=setInterval(tempototal,1000);
-    document.getElementById('continuar').style.display="none";
-    document.getElementById('title').style.display="none";
-    document.getElementById('totaltreino').style.display="block";
-}
 
    function tempototal(){
        segundostotal++;
@@ -191,15 +209,24 @@ function timer(){
            segundostotal=0;
            if(minutostotal<10){
                document.getElementById('mintot').innerHTML='0'+minutostotal;
+               document.getElementsByClassName("mintot")[0].innerHTML='0'+minutostotal;
+               document.getElementsByClassName("mintot")[1].innerHTML='0'+minutostotal;
            }else{
                document.getElementById('mintot').innerHTML=minutostotal;
+               document.getElementsByClassName("mintot")[0].innerHTML= minutostotal;
+               document.getElementsByClassName("mintot")[1].innerHTML= minutostotal;
+               
            }
            
        }
        if(segundostotal<10){
            document.getElementById('segtot').innerHTML='0'+segundostotal;
+           document.getElementsByClassName("segtot")[0].innerHTML='0'+segundostotal;
+           document.getElementsByClassName("segtot")[1].innerHTML='0'+segundostotal;
        }else{
            document.getElementById('segtot').innerHTML=segundostotal;
+           document.getElementsByClassName("segtot")[0].innerHTML= segundostotal;
+           document.getElementsByClassName("segtot")[1].innerHTML= segundostotal;
        }
        
    } 
