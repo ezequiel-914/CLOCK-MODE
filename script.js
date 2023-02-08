@@ -16,6 +16,7 @@ function start(){
     document.getElementById('dados-definidos').style.display="block";
     document.getElementById('title').style.display="none";
     document.getElementById('title').style.display="none";
+    document.getElementById('homediv').style.display="none";
     document.getElementById('myvideo').play();
  }
  function ocultarcontinuar(){
