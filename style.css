@@ -182,6 +182,11 @@ header{
     background-image: url(img/home.png);
     background-position: center center;
     background-size: cover;
+    border-radius: 5px;
+}
+.home:hover{
+    box-shadow: white 2px 2px 3px;
+    transition: all 0.3s;
 }
 
 option{
@@ -761,6 +766,10 @@ footer{
     #data-txt, #hora-txt{
         font-size: 35px;
     }
+    .home{
+        width: 20px;
+        height: 20px;
+    }
     .dados{
         width: 80vw;
     }
@@ -773,7 +782,7 @@ footer{
 
 @media (max-width: 440px){
   #header h2{
-        font-size: 25px;
+        font-size: 40px;
         color: white;
     }
     .mode{
