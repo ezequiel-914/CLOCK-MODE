@@ -8,6 +8,7 @@ let tela;
    
 
 function start(){
+    document.getElementById('myvideo').play();
     tmp = setInterval(timer, 1000);
     data = setInterval(data,1000);
     tmpt = setInterval(tempototal,1000);
@@ -17,11 +18,6 @@ function start(){
     document.getElementById('continuar').style.display="none";
     document.getElementById('title').style.display="none";
     document.getElementById('myvideo').play();
-
-   
-    
-    
-  
  }
 function telaverif(){
     var largura = window.innerWidth;
@@ -34,7 +30,6 @@ function telaverif(){
         document.getElementById('totaltreino-lat').style.display="block";
     }
 }
-
  function data(){   
     var data = new Date();
     
@@ -60,14 +55,10 @@ function telaverif(){
     
     
 }
-
 function timer(){
     var tempo = document.getElementById('tempo').value;
     document.getElementById('botaopausa').style.display="block";
     document.getElementById('voltar').style.display="block";
-
-
-
     switch(tempo){
         case "minuto":
             voltas = 5;
@@ -115,7 +106,6 @@ function timer(){
             document.getElementsByClassName("temp-def")[1].innerHTML="00:05:00";
             break;
     }
-    console.log(voltas);
     document.getElementById('header').style.display="none";
     document.getElementById('corpo').style.display="flex";
     contador++;
