@@ -15,9 +15,11 @@ function start(){
     tela = setInterval(telaverif, 1000);
     document.getElementById('dados-definidos').style.display="block";
     document.getElementById('title').style.display="none";
-    document.getElementById('continuar').style.display="none";
     document.getElementById('title').style.display="none";
     document.getElementById('myvideo').play();
+ }
+ function ocultarcontinuar(){
+        document.getElementById('continuar').style.display="none";
  }
 function telaverif(){
     var largura = window.innerWidth;
@@ -59,6 +61,7 @@ function timer(){
     var tempo = document.getElementById('tempo').value;
     document.getElementById('botaopausa').style.display="block";
     document.getElementById('voltar').style.display="block";
+    document.getElementById('continuar').style.display="none";
     switch(tempo){
         case "minuto":
             voltas = 5;

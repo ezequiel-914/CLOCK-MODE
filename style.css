@@ -509,6 +509,7 @@ option{
     transform: translate(1px, 1px);
 }
 #continuar{
+    display: none;
     color: var(--cor11open);
     height: 60px;
     width: 200px;
@@ -722,6 +723,11 @@ footer{
         height: 75px;
     }
     #voltar{
+        width: 130px;
+        height: 50px;
+        font-size: 30px;
+    }
+    #continuar{
         width: 130px;
         height: 50px;
         font-size: 30px;
