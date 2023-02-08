@@ -167,7 +167,21 @@ header{
     color: orange;
     padding: 30px;
     height: 400px;
-
+}
+.homediv{
+    width: 100vw;
+    height: 65px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+}
+.home{
+    width: 30px;
+    height: 30px;
+    background-image: url(img/home.png);
+    background-position: center center;
+    background-size: cover;
 }
 
 option{
